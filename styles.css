@@ -1,0 +1,38 @@
+/* ---- imports ---- */
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+
+/* ---- root (var) ---- */
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --darker-blue: hsl(216, 12%, 8%);
+
+  --weight-400: 400;
+  --weight-700: 700;
+}
+
+/* ---- universal ---- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+}
+
+/* ---- classes ---- */
+
+/* ---- body ---- */
