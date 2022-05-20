@@ -1,6 +1,6 @@
 /* ---- imports ---- */
 
-@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@100&display=swap');
 
 /* ---- root (var) ---- */
 
@@ -11,7 +11,7 @@
   --dark-blue: hsl(213, 19%, 18%);
   --darker-blue: hsl(216, 12%, 8%);
 
-  --primary: hsl(25, 97%, 53%);
+  --orange: hsl(25, 97%, 53%);
 
   --weight-400: 400;
   --weight-700: 700;
@@ -33,7 +33,7 @@ html {
 
 body {
   font-family: 'Overpass', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: var(--weight-400);
   color: var(--white);
 }
@@ -68,4 +68,49 @@ body .container {
   border-radius: 1.5rem;
 
   background: linear-gradient(135deg, var(--dark-blue), var(--darker-blue));
+}
+
+.text__img {
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--medium-grey);
+}
+
+.text__h1 {
+  margin: 2.5rem 0;
+  color: var(--white);
+}
+
+.text__p {
+  margin: 0 0 2.5rem 0;
+  color: var(--light-grey);
+  font-weight: var(--weight-700);
+}
+
+.feedback__rating {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0 0 2rem 0;
+}
+
+.feedback__rating .btnRating {
+  padding: 1.5rem;
+
+  color: var(--white);
+  background-color: var(--medium-grey);
+
+  border-radius: 50%;
+  border: none;
+}
+
+.feedback__Submit #btnSubmit {
+  width: 100%;
+  padding: 1rem;
+
+  color: var(--white);
+  background-color: var(--orange);
+
+  border-radius: 2rem;
+  border: none;
 }
