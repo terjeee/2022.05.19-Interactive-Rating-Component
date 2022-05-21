@@ -1,13 +1,13 @@
 /* ---- imports ---- */
 
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
 
 /* ---- root (var) ---- */
 
 :root {
   --white: hsl(0, 0%, 100%);
   --light-grey: hsl(217, 12%, 63%);
-  --medium-grey: hsl(216, 12%, 54%);
+  --medium-grey: hsla(216, 12%, 54%, 0.1);
   --dark-blue: hsl(213, 19%, 18%);
   --darker-blue: hsl(216, 12%, 8%);
 
@@ -51,7 +51,7 @@ body {
   height: 100vh;
 
   padding: auto;
-  margin: 0 2rem;
+  margin: 0 1.5rem;
 
   display: flex;
   align-items: center;
@@ -64,6 +64,8 @@ body .container {
   display: flex;
   flex-direction: column;
 
+  max-width: 40rem;
+
   padding: 2.5rem;
   border-radius: 1.5rem;
 
@@ -71,46 +73,74 @@ body .container {
 }
 
 .text__img {
-  padding: 0.5rem;
+  padding: 1.5rem;
   border-radius: 50%;
   background-color: var(--medium-grey);
 }
 
 .text__h1 {
-  margin: 2.5rem 0;
+  margin: 2.5rem 0 1.5rem 0;
   color: var(--white);
+  font-weight: var(--weight-700);
 }
 
 .text__p {
-  margin: 0 0 2.5rem 0;
   color: var(--light-grey);
-  font-weight: var(--weight-700);
+  font-weight: var(--weight-400);
+}
+
+.feedback {
+  margin: 2.5rem 0 0 0;
 }
 
 .feedback__rating {
   display: flex;
   justify-content: space-between;
 
-  margin: 0 0 2rem 0;
+  margin: 0 0 2.5rem 0;
 }
 
 .feedback__rating .btnRating {
-  padding: 1.5rem;
-
-  color: var(--white);
+  color: var(--light-grey);
   background-color: var(--medium-grey);
+
+  height: 4.5rem;
+  width: 4.5rem;
 
   border-radius: 50%;
   border: none;
+
+  cursor: pointer;
+}
+
+.feedback__rating .btnRating:hover {
+  color: var(--white);
+  background-color: var(--orange);
+}
+
+.feedback__rating .btnRating:focus {
+  color: var(--white);
+  background-color: var(--light-grey);
 }
 
 .feedback__Submit #btnSubmit {
   width: 100%;
-  padding: 1rem;
+  padding: 1.5rem 0;
 
   color: var(--white);
   background-color: var(--orange);
 
-  border-radius: 2rem;
+  font-size: 1.6rem;
+  font-weight: var(--weight-400);
+  letter-spacing: 0.2rem;
+
+  border-radius: 10rem;
   border: none;
+
+  cursor: pointer;
+}
+
+.feedback__Submit #btnSubmit:hover {
+  color: var(--orange);
+  background-color: var(--white);
 }
