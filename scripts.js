@@ -1,22 +1,35 @@
+// const/let
+
 const btnRating = document.querySelectorAll('.btnRating');
 const btnSubmit = document.querySelector('#btnSubmit');
 
 const page1 = document.querySelector('#page1');
+const page2 = document.querySelector('#page2');
+const insertRating = document.querySelector('#insertRating');
 
 let rating;
 
-// eventListener på btnRating(1-5)
+// functions
+
+function toggleClassHidden(element) {
+  element.classList.toggle('hidden');
+}
+
+// btnRating(1-5)
 
 btnRating.forEach(btn =>
   btn.addEventListener('click', function (e) {
-    rating = e.target.value;
+    rating = Number(e.target.value);
   })
 );
 
-// eventListener på btnSubmit
+// btnSubmit
 
 btnSubmit.addEventListener('click', function (e) {
   if (!rating) return;
 
-  page1.classList.add('hidden');
+  insertRating.append(rating);
+
+  toggleClassHidden(page1);
+  toggleClassHidden(page2);
 });
